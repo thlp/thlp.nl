@@ -1,0 +1,27 @@
+backend:
+  name: test-repo
+
+media_folder: static/assets
+
+collections:
+  - name: press
+    label: Press releases
+    folder: "collections/_en/press"
+    create: true
+    fields:
+      - { name: path, label: "Path" }
+      - { name: date, label: "Date", widget: date }
+      - { name: published, label: "Published", widget: "boolean", default: true}
+      - { name: title, label: "Title" }
+      - { name: excerpt, label: "Excerpt" }
+      - { name: body, label: "Body", widget: "markdown" }
+  - name: stories
+    label: Customer stories
+    folder: "collections/_en/stories"
+    create: true
+    fields:
+      - { name: path, label: "Path" }
+      - { name: date, label: "Date", widget: date }
+      - { name: published, label: "Published", widget: "boolean", default: true}
+      - { name: logo, label: "Logo", widget: "image"}
+      - { name: story, label: "Story", widget: "markdown" }

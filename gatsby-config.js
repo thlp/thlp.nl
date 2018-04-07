@@ -3,6 +3,7 @@ module.exports = {
     title: `The Hague Legal Partners`,
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
