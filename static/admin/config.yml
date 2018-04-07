@@ -1,12 +1,13 @@
 backend:
-  name: test-repo
+  name: github
+  repo: thlp/thlp.nl
 
 media_folder: static/assets
 
 collections:
   - name: press
     label: Press releases
-    folder: "collections/_en/press"
+    folder: collections/_en/press
     create: true
     fields:
       - { name: path, label: "Path" }
@@ -17,7 +18,7 @@ collections:
       - { name: body, label: "Body", widget: "markdown" }
   - name: stories
     label: Customer stories
-    folder: "collections/_en/stories"
+    folder: collections/_en/stories
     create: true
     fields:
       - { name: path, label: "Path" }
