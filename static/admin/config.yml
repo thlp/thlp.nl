@@ -5,24 +5,35 @@ backend:
 media_folder: static/assets
 
 collections:
+  - name: partners
+    label: Partners
+    folder: collections/partners
+    create: true
+    fields:
+      - { name: name, label: "full name" }
+      - { name: birthday, label: "Date of birth", widget: date }
+      - { name: employers, label: "Employers", widget: list }
   - name: press
     label: Press releases
     folder: collections/_en/press
     create: true
     fields:
-      - { name: path, label: "Path" }
+      - { name: title, label: "Title" }
       - { name: date, label: "Date", widget: date }
       - { name: published, label: "Published", widget: "boolean", default: true}
-      - { name: title, label: "Title" }
-      - { name: excerpt, label: "Excerpt" }
+      - { name: excerpt, label: "Excerpt / summary", widget: "text" }
       - { name: body, label: "Body", widget: "markdown" }
   - name: stories
     label: Customer stories
     folder: collections/_en/stories
     create: true
     fields:
-      - { name: path, label: "Path" }
-      - { name: date, label: "Date", widget: date }
+      - { name: title, label: "Title" }
       - { name: published, label: "Published", widget: "boolean", default: true}
+      - { name: company, label: "Company" }
+      - name: website
+        label: "Website"
+        required: false
+        pattern: ['(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?', "Enter valid URL (like www.google.com)"]
       - { name: logo, label: "Logo", widget: "image"}
       - { name: story, label: "Story", widget: "markdown" }
