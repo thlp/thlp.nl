@@ -10,9 +10,11 @@ collections:
     folder: collections/partners
     create: true
     fields:
-      - { name: name, label: "full name" }
-      - { name: birthday, label: "Date of birth", widget: date }
-      - { name: employers, label: "Employers", widget: list }
+      - { name: "title", label: "full name" }
+      - { name: "birthday", label: "Date of birth", widget: date }
+      - name: "employers"
+        label: "Employers"
+        widget: list
   - name: press
     label: Press releases
     folder: collections/_en/press
@@ -36,4 +38,5 @@ collections:
         required: false
         pattern: ['(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?', "Enter valid URL (like www.google.com)"]
       - { name: logo, label: "Logo", widget: "image"}
-      - { name: story, label: "Story", widget: "markdown" }
+      - { name: quote, label: "Quote", required: false, widget: text }
+      - { name: body, label: "Story", widget: "markdown" }
