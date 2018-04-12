@@ -11,32 +11,44 @@ collections:
     create: true
     fields:
       - { name: "title", label: "full name" }
+      - { name: "published", label: "Published", widget: "boolean", default: true}
       - { name: "birthday", label: "Date of birth", widget: date }
-      - name: "employers"
-        label: "Employers"
-        widget: list
-  - name: press
+      - { name: "employers", label: "Employers", widget: list }
+      - { name: "body", label: "Resume", widget: "markdown" }
+  - name: releases
     label: Press releases
-    folder: collections/_en/press
+    folder: collections/releases
     create: true
     fields:
-      - { name: title, label: "Title" }
-      - { name: date, label: "Date", widget: date }
-      - { name: published, label: "Published", widget: "boolean", default: true}
-      - { name: excerpt, label: "Excerpt / summary", widget: "text" }
-      - { name: body, label: "Body", widget: "markdown" }
-  - name: stories
-    label: Customer stories
-    folder: collections/_en/stories
+      - { name: "title", label: "Title" }
+      - { name: "published", label: "Published", widget: "boolean", default: true}
+      - { name: "date", label: "Date", widget: date }
+      - { name: "excerpt", label: "Excerpt", widget: text }
+      - { name: "body", label: "Article", widget: "markdown" }
+  - name: customers
+    label: Customers
+    folder: collections/customers
     create: true
     fields:
-      - { name: title, label: "Title" }
-      - { name: published, label: "Published", widget: "boolean", default: true}
-      - { name: company, label: "Company" }
-      - name: website
-        label: "Website"
+      - { name: "title", label: "Name" }
+      - { name: "published", label: "Published", widget: "boolean", default: true}
+      - name: "link"
+        label: "Link"
         required: false
         pattern: ['(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?', "Enter valid URL (like www.google.com)"]
       - { name: logo, label: "Logo", widget: "image"}
-      - { name: quote, label: "Quote", required: false, widget: text }
-      - { name: body, label: "Story", widget: "markdown" }
+  - name: stories
+    label: Customer stories
+    folder: collections/stories
+    create: true
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "published", label: "Published", widget: "boolean", default: true}
+      - name: "company"
+        label: "Company"
+        widget: "relation"
+        collection: "customers"
+        searchFields: ["title",]
+        valueField: "title"
+      - { name: "excerpt", label: "Excerpt", required: false, widget: text }
+      - { name: "body", label: "Story", widget: "markdown" }
