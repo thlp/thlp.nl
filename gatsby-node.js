@@ -1,22 +1,22 @@
-exports.onCreateNode = ({node, boundActionCreators,}) => {
-    const { createNodeField } = boundActionCreators;
-
-    if (node.internal.type === "MarkdownRemark"){
-        console.log(node.internal.type);
-    }
-};
-
-
-exports.sourceNodes = ({ boundActionCreators, getNodes, getNode }) => {
-    const { createNodeField } = boundActionCreators;
-
-    const markdownNodes = getNodes()
-        //.filter(node => node.internal.type === `MarkdownRemark`)
-        .forEach(node => {
-            console.log(node.internal.type +": "+ node.id);
-        });
-
-};
+// exports.onCreateNode = ({node, boundActionCreators,}) => {
+//     const { createNodeField } = boundActionCreators;
+//
+//     if (node.internal.type === "MarkdownRemark"){
+//         console.log(node.internal.type);
+//     }
+// };
+//
+//
+// exports.sourceNodes = ({ boundActionCreators, getNodes, getNode }) => {
+//     const { createNodeField } = boundActionCreators;
+//
+//     const markdownNodes = getNodes()
+//         //.filter(node => node.internal.type === `MarkdownRemark`)
+//         .forEach(node => {
+//             console.log(node.internal.type +": "+ node.id);
+//         });
+//
+// };
 
 
 

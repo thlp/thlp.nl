@@ -43,25 +43,7 @@ collections:
     fields:
       - { name: "title", label: "Title" }
       - { name: "published", label: "Published", widget: "boolean", default: true}
-      - name: "company"
-        label: "Company"
-        widget: "relation"
-        collection: "companies"
-        searchFields: ["title",]
-        valueField: "title"
+      - { name: "company", label: "Company" }
+      - { name: "quote", label: "Short quote"}
       - { name: "body", label: "Story", widget: "markdown" }
-  - label: "Pages"
-    name: "pages"
-    files:
-    - name: companies
-      label: Companies
-      file: "collections/companies.yml"
-      fields:
-        - {label: Title, name: title, widget: string}
-        - {label: Intro, name: intro, widget: markdown}
-        - name: company
-          label: Company
-          widget: list
-          fields:
-            - {label: Name, name: name, widget: string}
-            - {label: Logo, name: logo, widget: image}
+
