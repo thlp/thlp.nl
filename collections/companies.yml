@@ -1,5 +1,2 @@
-title: test
-intro: bla bla
-company:
-  - logo: /static/assets/acme_logo_72_rgb.png
-    name: testcorp
+name: boo
+logo: /static/assets/hammock2.png
