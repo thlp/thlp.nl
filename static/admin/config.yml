@@ -23,7 +23,6 @@ collections:
       - { name: "title", label: "Title" }
       - { name: "published", label: "Published", widget: "boolean", default: true}
       - { name: "date", label: "Date", widget: date }
-      - { name: "excerpt", label: "Excerpt", widget: text }
       - { name: "body", label: "Article", widget: "markdown" }
   - name: customers
     label: Customers
@@ -47,8 +46,22 @@ collections:
       - name: "company"
         label: "Company"
         widget: "relation"
-        collection: "customers"
+        collection: "companies"
         searchFields: ["title",]
         valueField: "title"
-      - { name: "excerpt", label: "Excerpt", required: false, widget: text }
       - { name: "body", label: "Story", widget: "markdown" }
+  - label: "Pages"
+    name: "pages"
+    files:
+    - name: companies
+      label: Companies
+      file: "collections/companies.yml"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Intro, name: intro, widget: markdown}
+        - name: company
+          label: Company
+          widget: list
+          fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Logo, name: logo, widget: image}

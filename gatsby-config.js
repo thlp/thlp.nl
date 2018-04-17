@@ -2,6 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `The Hague Legal Partners`,
   },
+  // mapping: {
+  //     "MarkdownRemark.fields.author": "MarkdownRemark",
+  //     "MarkdownRemark.fields.posts": "MarkdownRemark",
+  // },
   plugins: [
     `gatsby-plugin-netlify-cms`,
     {
