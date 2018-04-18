@@ -1,6 +1,3 @@
-title: test
-intro: re
-team:
-  - name: dds
-    photo: /static/assets/hammock2.png
-    position: dssdds
+- name: dds
+  photo: /static/assets/hammock2.png
+  position: dssdds
