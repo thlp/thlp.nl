@@ -13,6 +13,8 @@
     "gatsby-plugin-netlify-cms": "^1.0.12",
     "gatsby-source-filesystem": "^1.5.28",
     "gatsby-transformer-remark": "^1.7.39",
+    "gatsby-transformer-yaml": "^1.5.16",
+    "npm": "^5.8.0",
     "react": "latest"
   }
 }

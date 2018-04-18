@@ -1,0 +1,18 @@
+- id: ACME
+  title: Acme
+  customer: true
+  published: true
+  link: www.acme.com
+  logo: /static/assets/acme_logo_72_rgb.png
+- id: UMBRELLA
+  title: Umbrella corporation
+  customer: true
+  published: true
+  link: www.umbrella.com
+  logo: /static/assets/umbrellacorporation3.png
+- id: VOC
+  title: VOC
+  customer: true
+  published: true
+  link: www.voc.nl
+  logo: /static/assets/voc.svg

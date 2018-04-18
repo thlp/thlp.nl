@@ -24,18 +24,18 @@ collections:
       - { name: "published", label: "Published", widget: "boolean", default: true}
       - { name: "date", label: "Date", widget: date }
       - { name: "body", label: "Article", widget: "markdown" }
-  - name: customers
-    label: Customers
-    folder: collections/customers
-    create: true
-    fields:
-      - { name: "title", label: "Name" }
-      - { name: "published", label: "Published", widget: "boolean", default: true}
-      - name: "link"
-        label: "Link"
-        required: false
-        pattern: ['(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?', "Enter valid URL (like www.google.com)"]
-      - { name: logo, label: "Logo", widget: "image"}
+#  - name: customers
+#    label: Customers
+#    folder: collections/customers
+#    create: true
+#    fields:
+#      - { name: "title", label: "Name" }
+#      - { name: "published", label: "Published", widget: "boolean", default: true}
+#      - name: "link"
+#        label: "Link"
+#        required: false
+#        pattern: ['(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?', "Enter valid URL (like www.google.com)"]
+#      - { name: logo, label: "Logo", widget: "image"}
   - name: stories
     label: Customer stories
     folder: collections/stories
@@ -46,4 +46,16 @@ collections:
       - { name: "company", label: "Company" }
       - { name: "quote", label: "Short quote"}
       - { name: "body", label: "Story", widget: "markdown" }
-
+  - label: "Bestanden"
+    name: "bestanden"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "collections/test.yaml"
+        fields:
+          - label: Companies
+            name: companies
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
